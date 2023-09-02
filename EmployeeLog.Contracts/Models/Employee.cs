@@ -4,6 +4,6 @@ namespace EmployeeLog.Contracts.Models;
 
 public record Employee(
 	Guid Id,
-	Title Title, 
+	string Title, 
 	string Email,
 	DateTime CreatedAt);

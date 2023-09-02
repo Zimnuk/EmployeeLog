@@ -2,6 +2,6 @@
 
 namespace EmployeeLog.Contracts.Models;
 
-public record EmployeeCreate(Title Title, 
+public record EmployeeCreate(string Title, 
 	string Email,
 	List<Guid> Companies);
