@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLog.Api", "EmployeeLog.Api\EmployeeLog.Api.csproj", "{1CC2B5C8-F7A8-4919-A65F-527AA40DA189}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLog.Domain", "EmployeeLog.Domain\EmployeeLog.Domain.csproj", "{99319BF9-D54C-449E-9538-AD5D199ADCDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLog.Contracts", "EmployeeLog.Contracts\EmployeeLog.Contracts.csproj", "{EBDB7D78-E474-4148-9910-057560E17F1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{1CC2B5C8-F7A8-4919-A65F-527AA40DA189}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CC2B5C8-F7A8-4919-A65F-527AA40DA189}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CC2B5C8-F7A8-4919-A65F-527AA40DA189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99319BF9-D54C-449E-9538-AD5D199ADCDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99319BF9-D54C-449E-9538-AD5D199ADCDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99319BF9-D54C-449E-9538-AD5D199ADCDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99319BF9-D54C-449E-9538-AD5D199ADCDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDB7D78-E474-4148-9910-057560E17F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDB7D78-E474-4148-9910-057560E17F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDB7D78-E474-4148-9910-057560E17F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDB7D78-E474-4148-9910-057560E17F1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
