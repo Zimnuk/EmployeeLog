@@ -8,7 +8,7 @@ public static class DIExtensions
 	public static IServiceCollection AddEmployeeLogDB(this IServiceCollection services, string connectionString) {
 		services.AddEntityFrameworkNpgsql()
 			.AddDbContext<EmployeeDbContext>(options =>
-				options.UseNpgsql(connectionString, b=> b.MigrationsAssembly("EmployyLog.Api")));
+				options.UseNpgsql(connectionString));
 		return services;
 	}
 }
