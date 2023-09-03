@@ -1,4 +1,6 @@
-﻿using EmployeeLog.Contracts.Models;
+﻿using System.Text.Json;
+using EmployeeLog.Contracts.Enums;
+using EmployeeLog.Contracts.Models;
 using EmployeeLog.Domain.Extensions;
 using EmployeeLog.Domain.Interfaces.Repositories;
 using EmployeeLog.Domain.Interfaces.Services;
@@ -8,13 +10,15 @@ namespace EmployeeLog.Infrastructure.Services;
 public class EmployeeService:IEmployeeService
 {
 	private readonly IEmployeeRepository _employeeRepository;
+	private readonly ISystemLogRepository _systemLogRepository;
 
-	public EmployeeService(IEmployeeRepository employeeRepository) {
+	public EmployeeService(IEmployeeRepository employeeRepository, ISystemLogRepository systemLogRepository) {
 		_employeeRepository = employeeRepository;
+		_systemLogRepository = systemLogRepository;
 	}
 
 	public async Task<Employee> GetEmployee(Guid id) {
-		return await _employeeRepository.GetEmployee(id);
+		return  await _employeeRepository.GetEmployee(id);
 	}
 
 	public bool EmailIsUniq(string email) {
@@ -24,6 +28,13 @@ public class EmployeeService:IEmployeeService
 	}
 
 	public async Task<Employee> CreateEmployee(EmployeeCreate employer) {
-		return await _employeeRepository.CreateEmployee(employer);
+		var result =  await _employeeRepository.CreateEmployee(employer);
+		
+		var attributes = JsonSerializer.Serialize(employer);
+		var comment = "new employee is created";
+		
+		await _systemLogRepository.WriteLog(ResourceType.Employee, Event.Create, attributes, comment);
+		
+		return result;
 	}
 }

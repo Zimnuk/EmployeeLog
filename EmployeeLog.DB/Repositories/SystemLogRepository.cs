@@ -13,10 +13,10 @@ public class SystemLogRepository:ISystemLogRepository
 		_employeeDbContext = employeeDbContext;
 	}
 
-	public async Task WriteLog(string resourceType, Event eventName, string resourceAttributes, string comment) {
+	public async Task WriteLog(ResourceType resourceType, Event eventName, string resourceAttributes, string comment) {
 		var log = new SystemLogs()
 		{
-			ResourceType = resourceType,
+			ResourceType = resourceType.ToString(),
 			Event = eventName.ToString(),
 			ResourceAttribute = resourceAttributes,
 			Comment = comment
