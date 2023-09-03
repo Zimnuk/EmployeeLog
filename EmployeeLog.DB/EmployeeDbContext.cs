@@ -9,4 +9,10 @@ public class EmployeeDbContext:DbContext
 	public virtual DbSet<Employees> Employees { get; set; }
 	public virtual DbSet<Companies> Companies { get; set; }
 	public virtual DbSet<SystemLogs> SystemLogs { get; set; }
+
+	public EmployeeDbContext(DbContextOptions options):base(options) {
+		
+	}
+
+
 }
