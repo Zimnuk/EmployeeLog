@@ -1,6 +1,6 @@
 ﻿using EmployeeLog.Contracts.Models;
 using EmployeeLog.DB.Extensions;
-using EmployeeLog.Domain.Extensions;
+using EmployeeLog.Domain.Exceptions;
 using EmployeeLog.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 

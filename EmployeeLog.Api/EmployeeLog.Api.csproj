@@ -21,8 +21,9 @@
       </Content>
     </ItemGroup>
 
+
     <ItemGroup>
-      <ProjectReference Include="..\EmployeeLog.DB\EmployeeLog.DB.csproj" />
+      <ProjectReference Include="..\EmployeeLog.Infrastructure\EmployeeLog.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

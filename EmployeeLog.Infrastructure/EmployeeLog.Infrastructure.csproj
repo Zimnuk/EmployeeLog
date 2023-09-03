@@ -9,7 +9,17 @@
 
 
     <ItemGroup>
+      <ProjectReference Include="..\EmployeeLog.DB\EmployeeLog.DB.csproj" />
       <ProjectReference Include="..\EmployeeLog.Domain\EmployeeLog.Domain.csproj" />
+    </ItemGroup>
+
+
+
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+        <HintPath>..\..\..\..\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.21\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

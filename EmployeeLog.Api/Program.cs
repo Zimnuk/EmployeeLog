@@ -1,12 +1,13 @@
 
 
 using EmployeeLog.DB.Extensions;
+using EmployeeLog.Infrastructurecture.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connection = builder.Configuration.GetConnectionString("DefaultConnections");
-builder.Services.AddEmployeeLogDB(connection);
+builder.Services.AddEmployeeServices(connection);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

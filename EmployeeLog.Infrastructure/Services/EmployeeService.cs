@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using EmployeeLog.Contracts.Enums;
 using EmployeeLog.Contracts.Models;
-using EmployeeLog.Domain.Extensions;
+using EmployeeLog.Domain.Exceptions;
 using EmployeeLog.Domain.Interfaces.Repositories;
 using EmployeeLog.Domain.Interfaces.Services;
 
