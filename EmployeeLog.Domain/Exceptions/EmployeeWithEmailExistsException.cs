@@ -1,4 +1,4 @@
-﻿namespace EmployeeLog.Domain.Extensions;
+﻿namespace EmployeeLog.Domain.Exceptions;
 
 public class EmployeeWithEmailExistsException:Exception
 {
