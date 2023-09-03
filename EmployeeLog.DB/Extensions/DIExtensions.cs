@@ -12,6 +12,8 @@ public static class DIExtensions
 			.AddDbContext<EmployeeDbContext>(options =>
 				options.UseNpgsql(connectionString));
 		services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+		services.AddScoped<ICompanyRepository, CompanyRepository>();
+		services.AddScoped<ISystemLogRepository, SystemLogRepository>();
 		return services;
 	}
 }
