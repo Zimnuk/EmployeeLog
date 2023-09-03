@@ -4,6 +4,5 @@ namespace EmployeeLog.Domain.Interfaces.Services;
 
 public interface ICompanyService
 {
-	Task<bool> CheckThatTitleIsFree(string companyName, string employeeTitle);
-	Task CreateCompany(CompanyCreate companyCreate);
+	Task CreateCompany(CompanyCreate companyCreate, CancellationToken cancellationToken);
 }
