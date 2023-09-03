@@ -1,8 +1,8 @@
 ﻿using EmployeeLog.Contracts.Models;
 
-namespace EmployeeLog.Domain.Interfaces;
+namespace EmployeeLog.Domain.Interfaces.Services;
 
-public interface IEmployeeRepository
+public interface IEmployeeService
 {
 	Task<Employee> GetEmployee(string Email);
 	Task<Employee> CreateEmployee(EmployeeCreate employer);

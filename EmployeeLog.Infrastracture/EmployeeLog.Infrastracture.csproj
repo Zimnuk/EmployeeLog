@@ -6,17 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-
     <ItemGroup>
-      <ProjectReference Include="..\EmployeeLog.Contracts\EmployeeLog.Contracts.csproj" />
-
-
+      <Folder Include="Services\" />
     </ItemGroup>
-
-
-
-
-
-
 
 </Project>

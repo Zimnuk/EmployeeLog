@@ -1,5 +1,6 @@
 ﻿using EmployeeLog.DB.Repositories;
 using EmployeeLog.Domain.Interfaces;
+using EmployeeLog.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

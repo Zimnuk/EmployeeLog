@@ -1,6 +1,7 @@
 ﻿using EmployeeLog.Contracts.Models;
 using EmployeeLog.DB.Extensions;
 using EmployeeLog.Domain.Interfaces;
+using EmployeeLog.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeLog.DB.Repositories;

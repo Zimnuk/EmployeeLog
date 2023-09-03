@@ -3,6 +3,7 @@ using EmployeeLog.DB.Entities;
 using EmployeeLog.DB.Extensions;
 using EmployeeLog.Domain.Extensions;
 using EmployeeLog.Domain.Interfaces;
+using EmployeeLog.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeLog.DB.Repositories;

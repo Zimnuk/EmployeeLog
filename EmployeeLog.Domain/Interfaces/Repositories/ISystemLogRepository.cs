@@ -1,6 +1,6 @@
 ﻿using EmployeeLog.Contracts.Enums;
 
-namespace EmployeeLog.Domain.Interfaces;
+namespace EmployeeLog.Domain.Interfaces.Repositories;
 
 public interface ISystemLogRepository
 {

@@ -1,6 +1,7 @@
 ﻿using EmployeeLog.Contracts.Enums;
 using EmployeeLog.DB.Entities;
 using EmployeeLog.Domain.Interfaces;
+using EmployeeLog.Domain.Interfaces.Repositories;
 
 namespace EmployeeLog.DB.Repositories;
 
