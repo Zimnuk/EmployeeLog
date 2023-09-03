@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLog.Infrastracture", "EmployeeLog.Infrastracture\EmployeeLog.Infrastracture.csproj", "{85A7DFF9-2824-4E9F-A1C0-15ADE467CE8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLog.Infrastructure", "EmployeeLog.Infrastructure\EmployeeLog.Infrastructure.csproj", "{85A7DFF9-2824-4E9F-A1C0-15ADE467CE8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
