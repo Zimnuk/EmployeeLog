@@ -12,9 +12,9 @@ public static class DIExtensions
 		services.AddEntityFrameworkNpgsql()
 			.AddDbContext<EmployeeDbContext>(options =>
 				options.UseNpgsql(connectionString));
-		services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-		services.AddScoped<ICompanyRepository, CompanyRepository>();
-		services.AddScoped<ISystemLogRepository, SystemLogRepository>();
+		services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+		services.AddTransient<ICompanyRepository, CompanyRepository>();
+		services.AddTransient<ISystemLogRepository, SystemLogRepository>();
 		return services;
 	}
 }
