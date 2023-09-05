@@ -13,9 +13,9 @@ public class CompanyRepository:ICompanyRepository
 		_employeeDbContext = employeeDbContext;
 	}
 
-	public async Task<bool> TitleIsFree(string companyName, string employeeTitle) {
+	public async Task<bool> TitleIsFree(Guid companyId, string employeeTitle) {
 		var company = await _employeeDbContext.Companies.Include(companies => companies.Employees)
-			.SingleAsync(q => q.Name == companyName);
+			.SingleAsync(q => q.Id == companyId);
 		return company.Employees.All(q => q.Title != employeeTitle);
 
 	}

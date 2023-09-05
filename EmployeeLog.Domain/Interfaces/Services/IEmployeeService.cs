@@ -5,6 +5,6 @@ namespace EmployeeLog.Domain.Interfaces.Services;
 public interface IEmployeeService
 {
 	Task<Employee> GetEmployee(Guid id);
-	bool EmailIsUniq(string email);
-	Task<Employee> CreateEmployee(EmployeeCreate employer);
+	Task<bool> ValidNewEmployee(Employee employee, Guid companyId);
+	Task<Employee> CreateEmployee(EmployeeCreate employee);
 }

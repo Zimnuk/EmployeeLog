@@ -3,4 +3,5 @@
 namespace EmployeeLog.Contracts.Models;
 
 public record EmployeeCreate(string Title, 
-	string Email);
+	string Email,
+	List<Guid> Companies);

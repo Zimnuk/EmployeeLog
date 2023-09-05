@@ -26,4 +26,6 @@
       <ProjectReference Include="..\EmployeeLog.Infrastructure\EmployeeLog.Infrastructure.csproj" />
     </ItemGroup>
 
+
+
 </Project>

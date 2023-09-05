@@ -5,7 +5,7 @@ networks:
     
 services:
   employeelog.api:
-    image: employeelog.api
+    image: employeelog
     depends_on: 
       - "app_db"
     container_name: employeelog-api
