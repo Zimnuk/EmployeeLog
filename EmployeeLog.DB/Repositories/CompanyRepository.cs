@@ -20,6 +20,10 @@ public class CompanyRepository:ICompanyRepository
 
 	}
 
+	public async Task<bool> CompanyNameIsUniq(string companyName) {
+		return await _employeeDbContext.Companies.AllAsync(q => q.Name!= companyName);
+	}
+
 	public async Task<Company> CreateCompany(CompanyCreate companyCreate) {
 		var dbModel = companyCreate.ToDbModel();
 		await _employeeDbContext.Companies.AddAsync(dbModel);

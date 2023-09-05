@@ -1,5 +1,6 @@
 ﻿using EmployeeLog.Contracts.Enums;
 using EmployeeLog.Contracts.Models;
+using EmployeeLog.Domain.Exceptions;
 using EmployeeLog.Domain.Interfaces.Repositories;
 using EmployeeLog.Domain.Interfaces.Services;
 
@@ -17,6 +18,7 @@ public class CompanyService:ICompanyService
 	}
 	
 	public async Task<Company> CreateCompany(CompanyCreate companyCreate) {
+		
 		var company = await _companyRepository.CreateCompany(companyCreate);
 		var companyComment = "Company created";
 		_systemLogRepository.WriteLog(ResourceType.Company, Event.Create, companyCreate.Name, companyComment);
@@ -39,7 +41,12 @@ public class CompanyService:ICompanyService
 		await _companyRepository.AddEmployeesToCompany(company.Id, employees);
 		return company;
 	}
-	
+
+	private async Task<Company> SaveCompany(CompanyCreate companyCreate) {
+		if (await _companyRepository.CompanyNameIsUniq(companyCreate.Name))
+			return await _companyRepository.CreateCompany(companyCreate);
+		throw new CompanyNameExistsException();
+	}
 
 	private async Task<Employee> CreateEmployee(Employee employee, Guid company) {
 		var newEmployee = new EmployeeCreate(employee.Title, employee.Email, new List<Guid>(){company});
